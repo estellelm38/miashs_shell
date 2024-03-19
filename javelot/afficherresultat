@@ -1,0 +1,21 @@
+#!/bin/bash
+PRENOM=
+NOM=
+DATE=
+LANCERS=
+
+PRENOM="$1"
+shift
+NOM="$1"
+shift
+DATE="$1"
+shift
+LANCERS="$*"
+
+MEILLEUR=maximum $LANCERS
+
+echo "$PRENOM"
+echo "$NOM"
+echo "$DATE"
+echo "$LANCERS"
+echo "$MEILLEUR"

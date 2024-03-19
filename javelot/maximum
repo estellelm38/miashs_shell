@@ -1,0 +1,12 @@
+#!/bin/bash
+if test $# -eq 0 -o "$1" = "-h"; then
+	echo "usage : maximum suite de nombres"
+fi
+maxi=$1
+for i in "$@"; do
+    if [ "$i" -gt "$maxi" ]; then
+        maxi="$i"
+    fi
+done
+echo "$maxi"
+

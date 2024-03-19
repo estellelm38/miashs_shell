@@ -1,0 +1,6 @@
+#!/bin/bash
+
+count=$(who|wc -l)
+
+echo "Il y a $count utilisateurs connectés."
+

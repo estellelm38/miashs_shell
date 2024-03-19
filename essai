@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Affiche le premier paramètre sur la première ligne
+echo $1
+
+# Affiche le deuxième paramètre sur la deuxième ligne
+echo $2
+

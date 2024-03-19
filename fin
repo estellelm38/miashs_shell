@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for file in $*; do
+    echo "/* ------- Fin de <"$file"> ------- */" >> $file
+done
+
+echo "une ligne a été ajouté aux fichiers"

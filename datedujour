@@ -1,0 +1,46 @@
+#!/bin/bash
+
+#on stocke la date dans la variable $DATE
+DATE=$(date)
+
+#on stocke le numéro du jour dans la variable $JOUR
+JOUR=${DATE:8:2}
+
+#on stocke les 3 premiers caractères du mois dans $MOIS
+MOIS=${DATE:4:3}
+
+#correspondance avec le numéro de mois
+
+if  [ "$MOIS" = "Jan" ] ; then
+MOIS="1"
+elif [ "$MOIS" = "Feb" ] ; then
+MOIS="2"
+elif [ "$MOIS" = "Mar" ] ; then
+MOIS="3"
+elif [ "$MOIS" = "Apr" ] ; then
+MOIS="4"
+elif [ "$MOIS" = "May" ] ; then
+MOIS="5"
+elif [ "$MOIS" = "Jun" ] ; then
+MOIS="6"
+elif [ "$MOIS" = "Jul" ] ; then
+MOIS="7"
+elif [ "$MOIS" = "Aug" ] ; then
+MOIS="8"
+elif [ "$MOIS" = "Sep" ] ; then
+MOIS="9"
+elif [ "$MOIS" = "Oct" ] ; then
+MOIS="10"
+elif [ "$MOIS" = "Nov" ] ; then
+MOIS="11"
+elif [ "$MOIS" = "Dec" ] ; then
+MOIS="12"
+else
+echo "ERREUR"
+fi
+
+#on stocke l'année dans la variable $ANNEE
+
+ANNEE=${DATE:24:4}
+
+echo "Nous sommes le ${JOUR}eme jour du ${MOIS}eme mois de l'annee $ANNEE."

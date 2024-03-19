@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for file in $@ ; do
+    mv "$file" "$HOME/poubelle"
+done
+
+echo "Les fichiers ont ete deplaces vers la poubelle."
+

@@ -1,0 +1,25 @@
+#!/bin/bash
+if test $# -eq 0 -o "$1" = "-h"; then
+	echo "usage : donne la categorie de l'athlete"
+fi
+if [ "$1" -le 1976 ]; then
+    categ="master"
+elif [[ "$1" -ge 1977 && "$1" -le 1993 ]]; then
+    categ="senior"
+elif [[ "$1" -ge 1994 && "$1" -le 1996 ]]; then
+    categ="espoir"
+elif [[ "$1" -ge 1997 && "$1" -le 1998 ]]; then
+    categ="junior"
+elif [[ "$1" -ge 1999 && "$1" -le 2000 ]]; then
+    categ="cadet"
+elif [[ "$1" -ge 2001 && "$1" -le 2002 ]]; then
+    categ="minime"
+elif [[ "$1" -ge 2003 && "$1" -le 2004 ]]; then
+    categ="benjamin"
+elif [[ "$1" -ge 2005 && "$1" -le 2006 ]]; then
+    categ="poussin"
+elif [[ "$1" -ge 2007 && "$1" -le 2009 ]]; then
+    categ="ecole d'athletisme"
+else
+    categ="baby athle"
+fi

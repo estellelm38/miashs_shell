@@ -1,0 +1,17 @@
+#!/bin/bash
+if test $# -eq 0 -o "$1" = "-h"; then
+	echo "usage : testfic nomfichier"
+else 
+	for i in $@ ; do
+		if [ -f $1 ] ; then
+			echo "le fichier $1 existe"
+			shift
+		elif [ -d $1 ] ; then
+			echo "le repertoire $1 existe"
+			shift
+		else
+			echo $1 est absent !
+			shift
+		fi
+	done
+fi

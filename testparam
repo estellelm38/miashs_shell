@@ -1,0 +1,26 @@
+#!/bin/bash
+#si aucun paramètre n'a été passé
+if test $# -eq 0
+#alors
+then
+#affiche dans le terminal "Pas de parametre"
+echo "Pas de parametre"
+#si le premier paramètre passé est -h
+elif [ "$1" = "-h" ]
+#alors
+then
+#affiche dans le terminal "usage : testparam parametres"
+echo "usage : testparam parametres"
+#sinon
+else
+#affiche "Les parametres sont :" avec la liste des paramètres passés
+echo "Les parametres sont : $*"
+#fin du script
+fi
+
+#$# : nombre de paramètres
+#$1 : premier paramètre
+#$* : tous les paramètres
+
+#if test $# -eq 0 : si aucun paramètre n'a été passé
+#[ $1 = "-h" ] : le premier paramètre passé est -h

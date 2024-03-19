@@ -1,0 +1,19 @@
+#!/bin/bash
+if [ -d $1 ] ; then
+	echo "le nom donne correspond a un repertoire"
+elif [ -f $1 ] ; then
+	if [ -d sauvegarde ] ; then
+		for file in $@ ; do
+			cp "$file" "sauvegarde"
+			echo "le fichier a ete sauve"
+		done
+	else
+		mkdir sauvegarde
+		for file in $@ ; do
+			cp "$file" "sauvegarde"
+			echo "le fichier a ete sauve"
+		done
+	fi
+else
+	echo "fichier manquant"
+fi
